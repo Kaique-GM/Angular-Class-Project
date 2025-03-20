@@ -1,1 +1,16 @@
-<p>media-simples works!</p>
+<h1>Média Simples</h1>
+<label for="ac1" class="form-label">Nota da AC1:</label>
+<input type="number" name="ac1" [(ngModel)]="ac1" class="form-control">
+
+<label for="ac2" class="form-label">Nota da AC1:</label>
+<input type="number" name="ac2" [(ngModel)]="ac2" class="form-control">
+
+<label for="ag" class="form-label">Nota da AG:</label>
+<input type="number" name="ag" [(ngModel)]="ag" class="form-control">
+
+<label for="af" class="form-label">Nota da AF:</label>
+<input type="number" name="af" [(ngModel)]="af" class="form-control">
+
+<button (click)="calcularMedia()" class="btn btn-primary mt-2 mb-2">Calcular Média</button>
+<p>Média = {{media}}</p>
+<p>Situação = {{situacao}}</p>

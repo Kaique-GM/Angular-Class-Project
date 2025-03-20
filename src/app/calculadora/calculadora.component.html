@@ -1,1 +1,17 @@
-<p>calculadora works!</p>
+<h1>Calculadora</h1>
+<label for="num1" class="form-label">Número 1:</label>
+<input type="number" name="num1" [(ngModel)]="num1" class="form-control">
+
+<label for="num2" class="form-label">Numero 2:</label>
+<input type="number" name="num2" [(ngModel)]="num2" class="form-control">
+
+<label for="operacao" class="form-label">Escolha a Operação:</label>
+<select name="operacao" [(ngModel)]="operacao" class="form-control">
+  <option value="Somar">Somar</option>
+  <option value="Subtrair">Subtrair</option>
+  <option value="Multiplicar">Multiplicar</option>
+  <option value="Dividir">Dividir</option>
+</select>
+
+<button (click)="calcularResultado()" class="btn btn-primary mt-2 mb-2">Calcular</button>
+<p>Resultado = {{resultado}}</p>

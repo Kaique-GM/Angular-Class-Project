@@ -1,0 +1,9 @@
+<h1>Calculadora de IMC</h1>
+<label for="peso" class="form-label">Infome o seu Peso em Kg:</label>
+<input type="number" name="peso" [(ngModel)]="peso" class="form-control">
+
+<label for="altura" class="form-label">Infome a sua Altura em Metros:</label>
+<input type="number" name="altura" [(ngModel)]="altura" class="form-control">
+
+<button (click)="calcularIMC()" class="btn btn-primary mt-2 mb-2">Calcular</button>
+<p>Situação = {{situacao}}</p>
