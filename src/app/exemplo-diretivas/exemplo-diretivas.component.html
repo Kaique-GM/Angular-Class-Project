@@ -1,0 +1,35 @@
+<div class="row">
+    <div class="col-md-6">
+        <input type="checkbox" id="ckExibir"[(ngModel)]="exibirTabela">
+        <label for="ckExibir">Exibir Tabelas</label>
+    </div>
+    <div class="col-md-6">
+        <input type="text" class="form-control" [(ngModel)]="nome" >
+    </div>
+    <div class="col-12">
+        <!-- Método Antigo -->
+        <!-- <table *ngIf="exibirTabela" class="table table-bordered table-striped"> -->
+        <!-- Método Novo -->
+        @if(exibirTabela){
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th scope="col"> ID</th>
+                    <th scope="col">Nomes </th>
+                    <th scope="col">Cidades</th>
+                    <th scope="col">Celular</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let Pessoa of pessoas">
+                    <th scope="row">{{Pessoa.id}}</th>
+                    <td [ngStyle]="{'background-color' : Pessoa.nome==nome?'yellow':'white'}">{{Pessoa.nome}}</td>
+                    <td [ngClass]="{sorocaba:Pessoa.cidade=='Sorocaba'}">{{Pessoa.cidade}}</td>
+                    <td>{{Pessoa.celular}}</td>
+                </tr>
+                
+            </tbody>
+        </table>
+        }
+    </div>
+</div>

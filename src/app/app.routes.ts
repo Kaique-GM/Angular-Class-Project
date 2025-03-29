@@ -9,15 +9,17 @@ import { TelaFilho2Component } from './tela-filho2/tela-filho2.component';
 import { ApoliceComponent } from './apolice/apolice.component';
 import { ConversorTemperaturaComponent } from './conversor-temperatura/conversor-temperatura.component';
 import { IMCComponent } from './imc/imc.component';
+import { ExemploDiretivasComponent } from './exemplo-diretivas/exemplo-diretivas.component';
+import { TarefasComponent } from './tarefas/tarefas.component';
 
 export const routes: Routes = [
     { path: '', redirectTo: 'home', pathMatch: 'full' },
     { path: 'home', component: HomeComponent },
     { path: 'calculadora', component: CalculadoraComponent },
     { path: 'media-simples', component: MediaSimplesComponent },
-    { path: 'apolice', component: ApoliceComponent},
-    { path: 'conversor', component: ConversorTemperaturaComponent},
-    { path: 'imc', component: IMCComponent},
+    { path: 'apolice', component: ApoliceComponent },
+    { path: 'conversor', component: ConversorTemperaturaComponent },
+    { path: 'imc', component: IMCComponent },
 
     {
         path: 'tela-pai', component: TelaPaiComponent,
@@ -28,6 +30,8 @@ export const routes: Routes = [
         ]
     },
 
+    { path: 'exemplo-diretivas', component: ExemploDiretivasComponent },
+    { path: 'tarefas', component: TarefasComponent},
 
     { path: '**', component: PaginaNaoEncontradaComponent }
 ];

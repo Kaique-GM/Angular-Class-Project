@@ -1,0 +1,12 @@
+<div class="row">
+    <div class="col-12">
+    
+        
+        <li *ngFor="let Tarefa of tarefas;" [ngStyle]="{'text-decoration' : Tarefa.concluida? 'line-through': 'none'}">
+            <i>{{Tarefa.id}} </i>
+            <i>{{Tarefa.descricao}}</i>
+            <i><button (click)="alterarStatus(Tarefa)" class="btn btn-primary mt-2 mb-2" > {{ Tarefa.concluida ? 'Desfazer' : 'Feita' }}</button></i>
+        </li>
+
+    </div>
+</div>
