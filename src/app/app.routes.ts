@@ -11,6 +11,9 @@ import { ConversorTemperaturaComponent } from './conversor-temperatura/conversor
 import { IMCComponent } from './imc/imc.component';
 import { ExemploDiretivasComponent } from './exemplo-diretivas/exemplo-diretivas.component';
 import { TarefasComponent } from './tarefas/tarefas.component';
+import { DetalheComponent } from './detalhe/detalhe.component';
+import { LoginComponent } from './login/login.component';
+import { PerfilComponent } from './perfil/perfil.component';
 
 export const routes: Routes = [
     { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -31,7 +34,11 @@ export const routes: Routes = [
     },
 
     { path: 'exemplo-diretivas', component: ExemploDiretivasComponent },
-    { path: 'tarefas', component: TarefasComponent},
+    { path: 'tarefas', component: TarefasComponent },
+    { path: 'detalhe/:id', component: DetalheComponent },
+    { path: 'login', component: LoginComponent },
+    { path: 'perfil/:email', component: PerfilComponent },
+
 
     { path: '**', component: PaginaNaoEncontradaComponent }
 ];

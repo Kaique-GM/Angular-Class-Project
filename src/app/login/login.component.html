@@ -1,0 +1,9 @@
+<h1>Login</h1>
+<label for="email" class="form-label">Email:</label>
+<input type="string" name="email" [(ngModel)]="email" class="form-control">
+
+<label for="senha" class="form-label">Senha:</label>
+<input type="string" name="senha" [(ngModel)]="senha" class="form-control">
+
+
+<button (click)="login(email)" class="btn btn-primary mt-2 mb-2">Login</button>
