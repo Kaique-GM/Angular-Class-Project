@@ -14,6 +14,8 @@ import { TarefasComponent } from './tarefas/tarefas.component';
 import { DetalheComponent } from './detalhe/detalhe.component';
 import { LoginComponent } from './login/login.component';
 import { PerfilComponent } from './perfil/perfil.component';
+import { CadastroUsuarioComponent } from './cadastro-usuario/cadastro-usuario.component';
+import { CadastroPessoaComponent } from './cadastro-pessoa/cadastro-pessoa.component';
 
 export const routes: Routes = [
     { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -38,6 +40,8 @@ export const routes: Routes = [
     { path: 'detalhe/:id', component: DetalheComponent },
     { path: 'login', component: LoginComponent },
     { path: 'perfil/:email', component: PerfilComponent },
+    { path: 'cadastro', component: CadastroUsuarioComponent },
+    { path: 'pessoa', component: CadastroPessoaComponent },
 
 
     { path: '**', component: PaginaNaoEncontradaComponent }
