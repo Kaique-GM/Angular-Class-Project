@@ -1,0 +1,15 @@
+<div class="row">
+    <div class="col-12">
+        <li *ngFor="let produto of produtos;">
+            <i>{{produto.id}} </i>
+            <i>{{produto.nome}} </i>
+            <i>{{produto.preco}} </i>
+            <i>{{produto.descricao}} </i>
+            <i><button (click)="comprar(produto)" class="btn btn-primary mt-2 mb-2"
+                    [ngStyle]="{'background-color' : produto.emEstoque? 'blue': 'gray'}">Comprar</button></i>
+            <i>{{produto.status}} </i>
+
+        </li>
+
+    </div>
+</div>

@@ -12,4 +12,7 @@ Este repositório contém um projeto desenvolvido durante as aulas de Front-end 
 ![BootStrap](https://img.shields.io/badge/Bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white) 
 
 
+## 📸 Imagens
+
+<img src="./public/red.png">
 

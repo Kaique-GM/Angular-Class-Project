@@ -26,9 +26,9 @@
         </div>
     </div>
 
-    
+
     <input type="checkbox" name="ativo" [(ngModel)]="usuario.ativo" required>
-    <label for="ativo" class="form-label">  Ativo</label> <br>
+    <label for="ativo" class="form-label"> Ativo</label> <br>
     <div *ngIf="form.submitted && form.controls['ativo'].errors" class="invalid">
         <div *ngIf="form.controls['ativo'].errors['required']">
             Ativo é obrigatório!

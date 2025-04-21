@@ -16,6 +16,9 @@ import { LoginComponent } from './login/login.component';
 import { PerfilComponent } from './perfil/perfil.component';
 import { CadastroUsuarioComponent } from './cadastro-usuario/cadastro-usuario.component';
 import { CadastroPessoaComponent } from './cadastro-pessoa/cadastro-pessoa.component';
+import { ProdutoComponent } from './produto/produto.component';
+import { SobreComponent } from './sobre/sobre.component';
+import { ProdutoDetalheComponent } from './produto-detalhe/produto-detalhe.component';
 
 export const routes: Routes = [
     { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -42,6 +45,9 @@ export const routes: Routes = [
     { path: 'perfil/:email', component: PerfilComponent },
     { path: 'cadastro', component: CadastroUsuarioComponent },
     { path: 'pessoa', component: CadastroPessoaComponent },
+    { path: 'produto', component: ProdutoComponent },
+    { path: 'sobre', component: SobreComponent },
+    { path: 'produtoDetalhe/:id', component:ProdutoDetalheComponent },
 
 
     { path: '**', component: PaginaNaoEncontradaComponent }
