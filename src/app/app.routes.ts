@@ -3,9 +3,6 @@ import { HomeComponent } from './home/home.component';
 import { CalculadoraComponent } from './calculadora/calculadora.component';
 import { MediaSimplesComponent } from './media-simples/media-simples.component';
 import { PaginaNaoEncontradaComponent } from './pagina-nao-encontrada/pagina-nao-encontrada.component';
-import { TelaPaiComponent } from './tela-pai/tela-pai.component';
-import { TelaFilho1Component } from './tela-filho1/tela-filho1.component';
-import { TelaFilho2Component } from './tela-filho2/tela-filho2.component';
 import { ApoliceComponent } from './apolice/apolice.component';
 import { ConversorTemperaturaComponent } from './conversor-temperatura/conversor-temperatura.component';
 import { IMCComponent } from './imc/imc.component';
@@ -19,6 +16,7 @@ import { CadastroPessoaComponent } from './cadastro-pessoa/cadastro-pessoa.compo
 import { ProdutoComponent } from './produto/produto.component';
 import { SobreComponent } from './sobre/sobre.component';
 import { ProdutoDetalheComponent } from './produto-detalhe/produto-detalhe.component';
+import { AnotacaoComponent } from './anotacao/anotacao.component';
 
 export const routes: Routes = [
     { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -28,16 +26,6 @@ export const routes: Routes = [
     { path: 'apolice', component: ApoliceComponent },
     { path: 'conversor', component: ConversorTemperaturaComponent },
     { path: 'imc', component: IMCComponent },
-
-    {
-        path: 'tela-pai', component: TelaPaiComponent,
-        children: [
-            { path: 'tela-filho1', component: TelaFilho1Component },
-            { path: 'tela-filho2', component: TelaFilho2Component },
-
-        ]
-    },
-
     { path: 'exemplo-diretivas', component: ExemploDiretivasComponent },
     { path: 'tarefas', component: TarefasComponent },
     { path: 'detalhe/:id', component: DetalheComponent },
@@ -48,6 +36,7 @@ export const routes: Routes = [
     { path: 'produto', component: ProdutoComponent },
     { path: 'sobre', component: SobreComponent },
     { path: 'produtoDetalhe/:id', component:ProdutoDetalheComponent },
+    { path: 'anotacao', component:AnotacaoComponent },
 
 
     { path: '**', component: PaginaNaoEncontradaComponent }
