@@ -9,23 +9,31 @@ import { Router, RouterLink, RouterLinkActive } from '@angular/router';
 })
 export class AnotacaoComponent {
 
-  constructor (private router: Router){}
+  constructor(private router: Router) { }
 
-  mediaSimples(){
+  mediaSimples() {
     this.router.navigate(['media-simples']);
   }
-  calculadora(){
+  calculadora() {
     this.router.navigate(['calculadora']);
   }
   diretivas1() {
     this.router.navigate(['exemplo-diretivas']);
   }
-  cadastros1(){
+  cadastros1() {
     this.router.navigate(['cadastro']);
   }
- 
-  cadastros2(){
+
+  cadastros2() {
     this.router.navigate(['pessoa']);
   }
+  home() {
+    this.router.navigate(['home']);
+  }
+  sobre() {
+    this.router.navigate(['sobre']);
+  }
+  produto() {
+    this.router.navigate(['produto']);
+  }
 }
-
