@@ -19,7 +19,7 @@ import { ProdutoDetalheComponent } from './produto-detalhe/produto-detalhe.compo
 import { AnotacaoComponent } from './anotacao/anotacao.component';
 
 export const routes: Routes = [
-    { path: '', redirectTo: 'home', pathMatch: 'full' },
+    { path: '', redirectTo: 'anotacao', pathMatch: 'full' },
     { path: 'home', component: HomeComponent },
     { path: 'calculadora', component: CalculadoraComponent },
     { path: 'media-simples', component: MediaSimplesComponent },

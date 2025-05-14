@@ -1,5 +1,29 @@
 <div class="row">
     <div class="col-12">
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr >
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>Valor</th>
+                    <th>Tem estoque</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let produto of produtos;">
+                    <th>{{produto.id}}</th>
+                    <th>{{produto.nome}}</th>
+                    <th>{{produto.valor}}</th>
+                    <th>{{produto.temEstoque}}</th>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+<!-- <div class="row">
+    <div class="col-12">
         <li *ngFor="let produto of produtos;">
             <i>{{produto.id}} </i>
             <i>{{produto.nome}} </i>
@@ -12,4 +36,4 @@
         </li>
 
     </div>
-</div>
+</div> -->
