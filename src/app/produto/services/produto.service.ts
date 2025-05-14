@@ -13,4 +13,8 @@ export class ProdutoService {
   inserir(produto: any) {
     return this.http.post(this.urlApi, produto);
   }
+
+  deletar(id: number) {
+    return this.http.delete(`${this.urlApi}/${id}`);
+  }
 }

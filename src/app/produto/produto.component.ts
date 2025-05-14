@@ -4,16 +4,23 @@ import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
 import { StorageService } from '../services/localStorage';
 import { ProdutoService } from '../produto/services/produto.service';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-produto',
-  imports: [CommonModule],
+  imports: [CommonModule, FormsModule],
   templateUrl: './produto.component.html',
   styleUrl: './produto.component.css'
 })
 export class ProdutoComponent implements OnInit {
 
   produtos: any = [];
+
+  nome: string = '';
+  valor: number = 0;
+  id: number = 0;
+  temEstoque: boolean = false;
+
 
   constructor(private produtoService: ProdutoService) {
 
@@ -23,15 +30,38 @@ export class ProdutoComponent implements OnInit {
     this.obterProduto();
   }
 
-  obterProduto(){
-    this.produtoService.obterTodos().subscribe((data:any) => {
+  obterProduto() {
+    this.produtoService.obterTodos().subscribe((data: any) => {
       this.produtos = data;
       console.log(this.produtos)
     })
   }
 
+  inserir() {
+    let produto = {
+      nome: this.nome,
+      valor: this.valor,
+      temEstoque: this.temEstoque,
+    }
 
+    this.produtoService.inserir(produto).subscribe(
+      response => {
+        this.produtoService.obterTodos().subscribe((data: any) => {
+          this.produtos = data;
+        })
+      },
+    );
+  }
 
+  deletar(id: any) {
+    this.produtoService.deletar(id).subscribe(
+      response => {
+        this.produtoService.obterTodos().subscribe((data: any) => {
+          this.produtos = data;
+        })
+      },
+    );
+  }
 
 
   // constructor(private route: Router, private service: StorageService){

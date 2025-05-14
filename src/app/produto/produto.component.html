@@ -2,7 +2,7 @@
     <div class="col-12">
         <table class="table table-bordered table-striped">
             <thead>
-                <tr >
+                <tr>
                     <th>ID</th>
                     <th>Nome</th>
                     <th>Valor</th>
@@ -15,12 +15,27 @@
                     <th>{{produto.nome}}</th>
                     <th>{{produto.valor}}</th>
                     <th>{{produto.temEstoque}}</th>
+                    <th><button class="btn btn-primary mt-2 mb-2" (click)="deletar(produto.id)">Deletar</button></th>
                 </tr>
             </tbody>
         </table>
     </div>
 </div>
 
+<h1>Novo produto</h1>
+<label for="nome" class="form-label">Infome o nome do produto:</label>
+<input type="string" name="nome" [(ngModel)]="nome" class="form-control">
+
+<label for="valor" class="form-label">Informe o valor:</label>
+<input type="number" name="valor" [(ngModel)]="valor" class="form-control">
+<label for="valor" class="form-label">Informe o valor</label>
+
+<select name="temEstoque" [(ngModel)]="temEstoque" class="form-control">
+    <option value="false">Não</option>
+    <option value="true">Sim</option>
+</select>
+
+<button (click)="inserir()" class="btn btn-primary mt-2 mb-2">Inserir</button>
 
 <!-- <div class="row">
     <div class="col-12">
